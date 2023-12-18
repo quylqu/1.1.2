@@ -1,8 +1,6 @@
 package jm.task.core.jdbc.dao;
 
-import jm.task.core.jdbc.model.User;
-
-import java.sql.SQLException;
+import jm.task.core.jdbc.hibernate_entity.User;
 import java.util.List;
 
 public interface UserDao {
@@ -10,9 +8,9 @@ public interface UserDao {
 
     void dropUsersTable();
 
-    void saveUser(String name, String lastName, byte age) throws SQLException;
+    void saveUser(String name, String lastName, Byte age);
 
-    void removeUserById(long id);
+    void removeUserById(Long id);
 
     List<User> getAllUsers();
 
